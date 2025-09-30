@@ -1,5 +1,11 @@
 package main
 
+import "runtime/debug"
+
+func init() {
+	debug.SetMemoryLimit(1000)
+}
+
 func palindrome(x int) bool {
 	if x < 0 {
 		return false
